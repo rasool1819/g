@@ -1,0 +1,397 @@
+.dashboard-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  ij
+  
+  .dashboard-header h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .week-indicator {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    height: calc(100vh - 200px);
+  }
+  
+  /* Anatomy Section */
+  .anatomy-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .anatomy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  
+  .anatomy-image {
+    position: relative;
+    width: 200px;
+    height: 350px;
+  }
+  
+  .anatomy-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .health-indicator {
+    position: absolute;
+    background: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .healthy-heart {
+    top: 25%;
+    left: -30px;
+    background: #dc2626;
+    color: white;
+  }
+  
+  .healthy-log {
+    bottom: 20%;
+    right: -30px;
+    background: #06b6d4;
+    color: white;
+  }
+  
+  /* Health Status Cards */
+  .health-status-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .health-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .health-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .health-card h4 {
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .health-date {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+  }
+  
+  .status-bar {
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .status-fill {
+    height: 100%;
+    width: 75%;
+    border-radius: 2px;
+  }
+  
+  .status-bar.healthy .status-fill {
+    background: #10b981;
+  }
+  
+  .status-bar.attention .status-fill {
+    background: #f59e0b;
+  }
+  
+  /* Calendar Section */
+.calendar-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar-header h3 {
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .calendar-nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .calendar-nav button {
+    background: #f1f5f9;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    color: #64748b;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar-day {
+    border-radius: 8px;
+    padding: 0.5rem;
+    min-height: 80px;
+    background: #f8fafc;
+  }
+  
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .day-name {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+  
+  .day-number {
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .day-appointments {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .appointment-time {
+    background: #3b82f6; /* Matches the original blue */
+    color: white;
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    font-size: 0.65rem; /* Slightly smaller to match original */
+    text-align: center;
+  }
+  
+  .appointment-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .appointment-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    color: white;
+  }
+  
+  .appointment-card.dentist {
+    background: #3b82f6; /* Matches the original blue */
+  }
+  
+  .appointment-card.physio {
+    background: #f59e0b; /* Matches the original yellow */
+  }
+  
+  .card-icon {
+    font-size: 1.5rem;
+  }
+  
+  .card-content h4 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem; /* Adjusted to match original */
+  }
+  
+  .card-content p {
+    font-size: 0.75rem; /* Adjusted to match original */
+    opacity: 0.9;
+  }
+  
+  /* Upcoming Schedule */
+  .upcoming-schedule {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .upcoming-schedule h3 {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+  }
+  
+  .schedule-day {
+    margin-bottom: 1.5rem;
+  }
+  
+  .schedule-day h4 {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .schedule-appointments {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .schedule-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+  }
+  
+  .appointment-icon {
+    font-size: 1.25rem;
+  }
+  
+  .appointment-details h5 {
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+  }
+  
+  .appointment-details p {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+  
+  /* Activity Section */
+  .activity-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-section h3 {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .activity-summary {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .activity-chart {
+    height: 150px;
+    display: flex;
+    align-items: end;
+  }
+  
+  .chart-bars {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+  }
+  
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  
+  .bar {
+    width: 100%;
+    max-width: 24px;
+    background: #3b82f6;
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bar-label {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .right-section {
+      grid-column: 1 / -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .dashboard-main {
+      padding: 1rem;
+    }
+  
+    .appointment-cards {
+      grid-template-columns: 1fr;
+    }
+  }
